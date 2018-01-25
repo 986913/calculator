@@ -88,7 +88,7 @@
 							else
 							{cur =parseInt(getStyle(obj,attr));}
 
-							var speed=(json[attr]-cur)/8;
+							var speed=(json[attr]-cur)/9;
 							speed=speed>0?Math.ceil(speed):Math.floor(speed);
 
 							if(cur!=json[attr])
