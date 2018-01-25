@@ -53,13 +53,13 @@
 
 		oBox.style.display='block';
 		oEvent.cancelBubble=true; //through the event object to cancel Bubble effect.
-		startMove(oBox,{opacity:70, top:100});//div开始移动
+		startMove(oBox,{opacity:70, top:100});//history box start to appear
 	}
-	document.onclick=function()// 收回div
+	document.onclick=function()
 	{	    
 		var oBox=document.getElementById('historyBox');
 		var oCal=document.getElementById('cal');
-		startMove(oBox,{opacity:0,top:1500});
+		startMove(oBox,{opacity:0,top:1500});//history box start to go away
 		// oBox.style.display='none';
 		startMove(oCal,{opacity:100});
 
@@ -73,14 +73,14 @@
 			else
 				{return getComputedStyle(obj,false)[name];}
 		}
-	function startMove(obj,json,funEnd)//funEnd是个函数，会在函数结束的时候被调用
+	function startMove(obj,json,funEnd)// my move function
 		{
 			clearInterval(obj.timer);
 			obj.timer=setInterval(function()
 			{
-						var bStop=true;//假设所有的值都已经到了
+						var bStop=true;
 
-						for(var attr in json)//对json里面的每一个都循环一变
+						for(var attr in json)
 						{
 							var cur=0;
 							if(attr=='opacity')
@@ -88,10 +88,10 @@
 							else
 							{cur =parseInt(getStyle(obj,attr));}
 
-							var speed=(json[attr]-cur)/6;
+							var speed=(json[attr]-cur)/8;
 							speed=speed>0?Math.ceil(speed):Math.floor(speed);
 
-							if(cur!=json[attr])//碰到了一个没有到达目标点的值
+							if(cur!=json[attr])
 								bStop=false;
 
 							if(attr=='opacity')
@@ -109,7 +109,7 @@
 						{
 							clearInterval(obj.timer);
 							 	if(funEnd) 
-							 		{funEnd();}//funEnd是个函数，会在函数结束的时候被调用
+							 		{funEnd();}
 						}
 
 			},30);
