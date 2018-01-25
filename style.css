@@ -1,0 +1,119 @@
+body,ul{ margin:0px; padding:0px;}
+body
+{ background: #355c7d; 
+  background: -webkit-linear-gradient(to left, #355c7d, #6c5b7b, #c06c84); 
+  background: linear-gradient(to left, #355c7d, #6c5b7b, #c06c84);
+}
+li{ list-style:none;}
+
+button
+  {
+    display: inline-block;  
+    zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */  
+    *display: inline;  
+    vertical-align: baseline;  
+    outline: none;  
+    cursor: pointer;  
+    text-align: center;  
+    text-decoration: none;  
+    font: 14px/100% Arial, Helvetica, sans-serif;  
+    padding: .5em 2em .55em;  
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);  
+    -webkit-border-radius: .5em;   
+    -moz-border-radius: .5em;  
+    border-radius: .5em;  
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);  
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);  
+    box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+    background:  #f2ae87;
+    position: absolute;
+    top:30px;
+    left: 50%;
+    margin-left: -69.295px;
+    box-shadow: 1.5px 1.5px 50px #888888; 
+
+  }
+
+#cal{
+  height:750px;
+  width:400px;
+  margin:100px auto;
+  box-shadow: 40px 20px 100px #888888; 
+}
+#head
+{
+  text-align:right;
+  background:white;
+  padding:20px;
+  overflow: hidden;
+}
+span{padding:20px;}
+#show{font-size:25px; color:gray;}
+#result{font-size:60px;}
+.side{
+      background: linear-gradient(to bottom,#4B5064,#22262F);
+    opacity:0.9;
+    filter:alpha(opacity=90);
+      width:25px;
+      height:500px;      
+}
+#l{float:left; margin-left:-25px;}
+#r{float:right;margin-right:-25px;}
+#content
+{
+  background: linear-gradient(to bottom,#595E71,#242730);
+  opacity:0.8;
+  filter:alpha(opacity=8)
+  width:400px;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+#button li
+{
+  display:inline-flex; 
+  justify-content:center;
+  font-size:30px;
+  line-height:100px;
+  color:white;
+  height:100px;
+  width:95px;  
+  transition: background 0.3s ease-in;
+}
+
+#button li:hover
+{
+  background-color:#f2ae87;
+}
+
+ul li i{padding: 0; margin: 34px; height: 30px;}
+#bottom
+{
+  height:110px;
+  min-width:400px;
+  text-align:center;
+  font-size:50px;
+  line-height:100px;
+  color:white;
+  background: linear-gradient(to bottom, #f2ae87, #FA5130);
+}
+
+#historyBox
+{
+   height: 760px;
+   width: 400px;
+   background: linear-gradient(to right, #FD8F50, #FA5130);
+   position: absolute;
+   top:0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   display: none;
+   filter: alpha(opacity:10);
+   opacity: 0.1;
+   box-shadow: 40px 20px 100px #888888; 
+   overflow:auto;
+}
+caption{font-size: 32px; color: white; width: 400px;}
+#list{font-size: 28px;color: #404247}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta  http-equiv="Content-Type" content="text/html" charset="utf-8">
+  <meta charset="utf-8">
+	<title>web-based Cal</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="jquery.base64.js"></script>  
+  	<script type="text/javascript" src="tableExport.js"></script>  
+</head>
+<body>
+<button onclick="$('#historyBox').tableExport({type:'excel',escape:'false'});">Excel Export</button>
+	
+<div id='cal'>
+		<div id='head'>
+			<span id='show'>0</span><br>
+    	    <span id='result'>0</span>
+		</div>
+	    <div class='side' id="l"></div>
+	    <div class='side' id='r'></div>
+		<div id='content'>
+			<ul id='button'>
+				<li onclick="addToScreen(this)">AC</li>
+		        <li onclick="addToScreen(this)">DEL</li>
+		        <li onclick="addToScreen(this)">%</li>
+		        <li id='history' onclick="getHistory()"><i class="fa fa-history" aria-hidden="true"></i></li>
+		        <li onclick="addToScreen(this)">7</li>
+		        <li onclick="addToScreen(this)">8</li>
+		        <li onclick="addToScreen(this)">9</li>
+		        <li onclick="addToScreen(this)">/</li>
+		        <li onclick="addToScreen(this)">4</li>
+		        <li onclick="addToScreen(this)">5</li>
+		        <li onclick="addToScreen(this)">6</li>
+		        <li onclick="addToScreen(this)">*</li>
+		        <li onclick="addToScreen(this)">1</li>
+		        <li onclick="addToScreen(this)">2</li>
+		        <li onclick="addToScreen(this)">3</li>
+		        <li onclick="addToScreen(this)">-</li>
+		        <li onclick="addToScreen(this)">0</li>
+		        <li onclick="addToScreen(this)">00</li>
+		        <li onclick="addToScreen(this)">.</li>
+		        <li onclick="addToScreen(this)">+</li>
+			</ul>
+		</div>
+	    <div id='bottom' onclick="addToScreen(this)">=</div>  	   
+</div> 
+<table  id='historyBox'>
+	<caption>History</caption>
+	<tr id='list'>
+		
+	</tr>
+</table>
+<script type="text/javascript" src="action.js"></script>
+</body>
+</html>
